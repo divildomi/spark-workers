@@ -14,7 +14,7 @@
         "diskSizeGb": "10",
         "diskType": "projects/cloudcomp-371816/zones/us-west4-b/diskTypes/pd-balanced",
         "labels": {},
-        "sourceImage": "projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20221206"
+        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20221206"
       },
       "mode": "READ_WRITE",
       "type": "PERSISTENT"
