@@ -26,7 +26,7 @@ def test():
 @app.route("/add",methods=['GET','POST'])
 def add():
   if request.method=='GET':
-    return "Use post to add" # replace with form template
+    return "Method used was GET ; use POST to add" # replace with form template
   else:
     token=get_api_key()
     ret = addWorker(token,request.form['num'])
@@ -43,7 +43,7 @@ def addWorker(token, num):
     headers={"Authorization": "Bearer "+token}
     resp=requests.post(url,headers=headers, data=data)
     if resp.status_code==200:     
-      return "Done"
+      return "Worker added !"
     else:
       print(resp.content)
       return "Error\n"+resp.content.decode('utf-8') + '\n\n\n'+data
